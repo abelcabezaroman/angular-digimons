@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DigimonsListComponent } from './digimons-list.component';
+import { DigimonsTableBasicComponent } from './digimons-table-basic.component';
 
-describe('DigimonsListComponent', () => {
-  let component: DigimonsListComponent;
-  let fixture: ComponentFixture<DigimonsListComponent>;
+describe('DigimonsTableBasicComponent', () => {
+  let component: DigimonsTableBasicComponent;
+  let fixture: ComponentFixture<DigimonsTableBasicComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DigimonsListComponent ]
+      declarations: [ DigimonsTableBasicComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DigimonsListComponent);
+    fixture = TestBed.createComponent(DigimonsTableBasicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

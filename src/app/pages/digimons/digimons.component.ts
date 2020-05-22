@@ -10,12 +10,14 @@ export class DigimonsComponent implements OnInit {
 
   digimons: Array<any>;
 
+  flagShowGallery = true;
+
   constructor(private digimonService: DigimonService) { }
 
   ngOnInit(): void {
-    this.digimonService.getAll().subscribe((res:any) => {
+    this.digimonService.getAll().subscribe((res: any) => {
       console.log(res);
-      this.digimons = res.splice(0,15);
+      this.digimons = res.splice(0, 15);
     })
   }
 

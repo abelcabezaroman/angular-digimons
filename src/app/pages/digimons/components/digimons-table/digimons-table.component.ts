@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DigimonsTableComponent implements OnInit {
 
+  selectedCar;
+
+  cols = [
+    { field: 'name', header: 'Name' },
+    { field: 'brand', header: 'Brand' }
+  ];
+
   cars = [
     {name:'Mazda 6', brand: 'Mazda'},
     {name:'Mitsubishi lancer', brand: 'Mitsubishi'},
@@ -19,4 +26,7 @@ export class DigimonsTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  prueba($event){
+    console.log('##ABEL## >> DigimonsTableComponent >>  prueba', $event);
+  }
 }
