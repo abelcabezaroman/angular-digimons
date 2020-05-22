@@ -11,7 +11,9 @@ import {TableModule} from 'primeng/table';
 import { DigimonsTableComponent } from './pages/digimons/components/digimons-table/digimons-table.component';
 import { DigimonsTableBasicComponent } from './pages/digimons/components/digimons-table-basic/digimons-table-basic.component';
 import { ButtonComponent } from './shared/components/button/button.component';
-import { DigimonDetailComponent } from './pages/digimons/pages/digimon-detail/digimon-detail.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { FormsModule } from "@angular/forms";
+import { DigimonDetailComponent } from "./pages/digimons/pages/digimon-detail/digimon-detail.component";
 
 @NgModule({
   declarations: [
@@ -21,14 +23,16 @@ import { DigimonDetailComponent } from './pages/digimons/pages/digimon-detail/di
     DigimonsTableComponent,
     DigimonsTableBasicComponent,
     ButtonComponent,
-    DigimonDetailComponent
+    DigimonDetailComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

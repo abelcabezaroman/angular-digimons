@@ -17,7 +17,7 @@ export class DigimonsComponent implements OnInit {
   ngOnInit(): void {
     this.digimonService.getAll().subscribe((res: any) => {
       console.log(res);
-      this.digimons = res.splice(0, 15);
+      this.digimons = res;
     })
   }
 

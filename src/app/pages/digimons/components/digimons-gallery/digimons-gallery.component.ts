@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as AOS from 'aos';
+
 
 @Component({
   selector: 'app-digimons-gallery',
@@ -9,7 +11,7 @@ export class DigimonsGalleryComponent implements OnInit {
 
   @Input() digimons;
 
-  constructor() { }
+  constructor() { AOS.init()}
 
   ngOnInit(): void {
   }

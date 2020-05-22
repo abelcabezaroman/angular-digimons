@@ -1,7 +1,9 @@
 <div class="c-digimons-list">
   <div class="row">
-    <div class="col-4" *ngFor="let digimon of digimons">
-      <div class="c-digimons-list__item">
+    <div data-aos="fade-up"
+         data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000" class="col-4" *ngFor="let digimon of
+         digimons">
+      <div class="c-digimons-list__item" [routerLink]="['/digimons', digimon.name]">
         <img class="c-digimons-list__img" src="{{digimon.img}}" alt="">
         <h4 class="c-digimons-list__title">{{digimon.name}}</h4>
         <p class="c-digimons-list__text">{{digimon.level}}</p>

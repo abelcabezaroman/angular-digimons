@@ -1,0 +1,15 @@
+<form>
+  <input type="text" [(ngModel)]="userInfo.name" name="name">
+  <input type="email" [(ngModel)]="userInfo.email" name="email">
+  <select name="gender" id="gender" [(ngModel)]="userInfo.gender">
+    <option value="male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+  <input [(ngModel)]="userInfo.doYouLike" type="radio" value="yes" name="doYouLike" ngModel> Yes
+  <input [(ngModel)]="userInfo.doYouLike" type="radio" value="no" name="doYouLike" ngModel> No
+
+  <textarea [(ngModel)]="userInfo.message" name="message"></textarea>
+
+  <button (click)="saveForm()">Guardar</button>
+</form>
