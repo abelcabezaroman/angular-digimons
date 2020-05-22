@@ -1,0 +1,11 @@
+<div class="c-digimons-list">
+  <div class="row">
+    <div class="col-4" *ngFor="let digimon of digimons">
+      <div class="c-digimons-list__item">
+        <img class="c-digimons-list__img" src="{{digimon.img}}" alt="">
+        <h4 class="c-digimons-list__title">{{digimon.name}}</h4>
+        <p class="c-digimons-list__text">{{digimon.level}}</p>
+      </div>
+    </div>
+  </div>
+</div>
