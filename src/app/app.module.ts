@@ -10,6 +10,8 @@ import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import { DigimonsTableComponent } from './pages/digimons/components/digimons-table/digimons-table.component';
 import { DigimonsTableBasicComponent } from './pages/digimons/components/digimons-table-basic/digimons-table-basic.component';
+import { ButtonComponent } from './shared/components/button/button.component';
+import { DigimonDetailComponent } from './pages/digimons/pages/digimon-detail/digimon-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DigimonsTableBasicComponent } from './pages/digimons/components/digimon
     DigimonsComponent,
     DigimonsGalleryComponent,
     DigimonsTableComponent,
-    DigimonsTableBasicComponent
+    DigimonsTableBasicComponent,
+    ButtonComponent,
+    DigimonDetailComponent
   ],
   imports: [
     BrowserModule,
