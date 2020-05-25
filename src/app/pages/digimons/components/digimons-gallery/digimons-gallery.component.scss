@@ -5,6 +5,10 @@
     padding: 24px;
     margin-bottom: 24px;
     cursor: pointer;
+
+    &--sec {
+      border: 2px solid;
+    }
   }
 
   &__img {

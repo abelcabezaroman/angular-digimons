@@ -5,8 +5,8 @@
          digimons">
       <div class="c-digimons-list__item" [routerLink]="['/digimons', digimon.name]">
         <img class="c-digimons-list__img" src="{{digimon.img}}" alt="">
-        <h4 class="c-digimons-list__title">{{digimon.name}}</h4>
-        <p class="c-digimons-list__text">{{digimon.level}}</p>
+        <h4 class="c-digimons-list__title">{{digimon.name | upper:'*'}}</h4>
+        <p class="c-digimons-list__text">{{digimon.level  | upper:'-'}}</p>
       </div>
     </div>
   </div>

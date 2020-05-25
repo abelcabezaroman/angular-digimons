@@ -12,8 +12,9 @@ import { DigimonsTableComponent } from './pages/digimons/components/digimons-tab
 import { DigimonsTableBasicComponent } from './pages/digimons/components/digimons-table-basic/digimons-table-basic.component';
 import { ButtonComponent } from './shared/components/button/button.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { DigimonDetailComponent } from "./pages/digimons/pages/digimon-detail/digimon-detail.component";
+import { UpperPipe } from "./shared/pipes/upper.pipe";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DigimonDetailComponent } from "./pages/digimons/pages/digimon-detail/di
     DigimonsTableBasicComponent,
     ButtonComponent,
     DigimonDetailComponent,
-    ContactComponent
+    ContactComponent,
+    UpperPipe
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { DigimonDetailComponent } from "./pages/digimons/pages/digimon-detail/di
     HttpClientModule,
     ButtonModule,
     TableModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,5 +15,5 @@ export class DigimonsGalleryComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
+
