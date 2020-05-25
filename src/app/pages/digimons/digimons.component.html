@@ -3,6 +3,7 @@
 
 
   <button (click)="flagShowGallery = !flagShowGallery">{{flagShowGallery ? 'Show table' : 'Show gallery'}}</button>
+    <button routerLink="/contact">Contact</button>
 
 
   <app-digimons-gallery *ngIf="flagShowGallery" [digimons]="digimons"></app-digimons-gallery>

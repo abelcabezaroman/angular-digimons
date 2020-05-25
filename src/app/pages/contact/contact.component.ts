@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from "@angular/forms";
+import { DigimonDataService } from "../../shared/services/local/digimonData.service";
 
 @Component({
   selector: 'app-contact',
@@ -13,14 +14,15 @@ export class ContactComponent implements OnInit {
   formGroup;
   isSubmited = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,  private digimonDataService: DigimonDataService) { }
 
   ngOnInit(): void {
+    console.log('##ABEL## >> ContactComponent >>  ngOnInit', this.digimonDataService.getDigimons());
     this.formGroup = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       gender: ['', Validators.required],
-      // doYouLike: ['', Validators.required],
+      doYouLike: ['', Validators.required],
       message: ['', Validators.required],
     });
 

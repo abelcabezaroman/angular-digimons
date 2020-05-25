@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DigimonService } from "../../shared/services/digimon.service";
+import { DigimonDataService } from "../../shared/services/local/digimonData.service";
 
 @Component({
   selector: 'app-digimons',
@@ -12,12 +13,13 @@ export class DigimonsComponent implements OnInit {
 
   flagShowGallery = true;
 
-  constructor(private digimonService: DigimonService) { }
+  constructor(private digimonService: DigimonService, private digimonDataService: DigimonDataService) { }
 
   ngOnInit(): void {
     this.digimonService.getAll().subscribe((res: any) => {
       console.log(res);
       this.digimons = res;
+      this.digimonDataService.setDigimons(res);
     })
   }
 
