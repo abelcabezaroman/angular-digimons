@@ -1,9 +1,8 @@
 <div class="container">
-<!--  <app-button>HOLA</app-button>-->
+  <!--  <app-button>HOLA</app-button>-->
 
 
   <button (click)="flagShowGallery = !flagShowGallery">{{flagShowGallery ? 'Show table' : 'Show gallery'}}</button>
-    <button routerLink="/contact">Contact</button>
 
 
   <app-digimons-gallery *ngIf="flagShowGallery" [digimons]="digimons"></app-digimons-gallery>
@@ -11,11 +10,11 @@
   <app-digimons-table-basic *ngIf="!flagShowGallery" [digimons]="digimons"></app-digimons-table-basic>
 
 
-<!--  <app-digimons-gallery *ngIf="flagShowGallery else digimonsTableBasic" [digimons]="digimons"></app-digimons-gallery>-->
+  <!--  <app-digimons-gallery *ngIf="flagShowGallery else digimonsTableBasic" [digimons]="digimons"></app-digimons-gallery>-->
 
-<!--  <ng-template #digimonsTableBasic>-->
-<!--    <app-digimons-table-basic [digimons]="digimons"></app-digimons-table-basic>-->
-<!--  </ng-template>-->
+  <!--  <ng-template #digimonsTableBasic>-->
+  <!--    <app-digimons-table-basic [digimons]="digimons"></app-digimons-table-basic>-->
+  <!--  </ng-template>-->
 
 
 </div>

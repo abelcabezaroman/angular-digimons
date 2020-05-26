@@ -15,6 +15,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { DigimonDetailComponent } from "./pages/digimons/pages/digimon-detail/digimon-detail.component";
 import { UpperPipe } from "./shared/pipes/upper.pipe";
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UpperPipe } from "./shared/pipes/upper.pipe";
     ButtonComponent,
     DigimonDetailComponent,
     ContactComponent,
-    UpperPipe
+    UpperPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
