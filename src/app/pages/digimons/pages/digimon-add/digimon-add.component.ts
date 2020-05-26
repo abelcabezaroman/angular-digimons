@@ -4,7 +4,7 @@ import { DigimonDataService } from "../../../../shared/services/local/digimonDat
 
 @Component({
   selector: 'app-add',
-  templateUrl: './diigmon-add.component.html',
+  templateUrl: './digmon-add.component.html',
   styleUrls: ['./digimon-add.component.scss']
 })
 export class DigimonAddComponent implements OnInit {

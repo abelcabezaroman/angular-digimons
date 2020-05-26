@@ -7,6 +7,7 @@ import { DigimonsTableBasicComponent } from "./components/digimons-table-basic/d
 import { DigimonDetailComponent } from "./pages/digimon-detail/digimon-detail.component";
 import { DigimonsComponent } from "./digimons.component";
 import { DigimonAddComponent } from "./pages/digimon-add/digimon-add.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DigimonAddComponent } from "./pages/digimon-add/digimon-add.component";
   imports: [
     CommonModule,
     DigimonsRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class DigimonsModule {}
