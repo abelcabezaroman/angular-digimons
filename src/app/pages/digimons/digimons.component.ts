@@ -16,11 +16,16 @@ export class DigimonsComponent implements OnInit {
   constructor(private digimonService: DigimonService, private digimonDataService: DigimonDataService) { }
 
   ngOnInit(): void {
-    this.digimonService.getAll().subscribe((res: any) => {
-      console.log(res);
-      this.digimons = res;
-      this.digimonDataService.setDigimons(res);
-    })
+    this.digimons = this.digimonDataService.getDigimons();
+
+    if(!this.digimons.length){
+      this.digimonService.getAll().subscribe((res: any) => {
+        console.log(res);
+        this.digimons = res.splice(0,3);
+        this.digimonDataService.setDigimons(this.digimons);
+      })
+    }
+
   }
 
 }

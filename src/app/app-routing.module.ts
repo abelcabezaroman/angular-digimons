@@ -4,6 +4,7 @@ import { DigimonsComponent } from "./pages/digimons/digimons.component";
 import { ContactComponent } from "./pages/contact/contact.component";
 import { DigimonDetailComponent } from "./pages/digimons/pages/digimon-detail/digimon-detail.component";
 import { HomeComponent } from "./pages/home/home.component";
+import { AddComponent } from "./pages/digimons/pages/add/add.component";
 
 
 const routes: Routes = [
@@ -12,6 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'digimons', component: DigimonsComponent
+  }
+  , {
+    path: 'digimons/add', component: AddComponent
   }
   ,
   {

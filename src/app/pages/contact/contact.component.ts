@@ -14,10 +14,9 @@ export class ContactComponent implements OnInit {
   formGroup;
   isSubmited = false;
 
-  constructor(private formBuilder: FormBuilder,  private digimonDataService: DigimonDataService) { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    console.log('##ABEL## >> ContactComponent >>  ngOnInit', this.digimonDataService.getDigimons());
     this.formGroup = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
