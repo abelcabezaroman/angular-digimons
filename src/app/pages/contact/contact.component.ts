@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from "@angular/forms";
-import { DigimonDataService } from "../../shared/services/local/digimonData.service";
 
 @Component({
   selector: 'app-contact',
