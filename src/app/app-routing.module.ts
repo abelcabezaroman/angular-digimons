@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DigimonsComponent } from "./pages/digimons/digimons.component";
-import { ContactComponent } from "./pages/contact/contact.component";
 import { DigimonDetailComponent } from "./pages/digimons/pages/digimon-detail/digimon-detail.component";
-import { HomeComponent } from "./pages/home/home.component";
 import { AddComponent } from "./pages/digimons/pages/add/add.component";
 
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent
+    path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'digimons', component: DigimonsComponent
@@ -22,7 +20,7 @@ const routes: Routes = [
     path: 'digimons/:digimonName', component: DigimonDetailComponent
   },
   {
-    path: 'contact', component: ContactComponent
+    path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
   }
 ];
 
