@@ -4,10 +4,10 @@ import { DigimonDataService } from "../../../../shared/services/local/digimonDat
 
 @Component({
   selector: 'app-add',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.scss']
+  templateUrl: './diigmon-add.component.html',
+  styleUrls: ['./digimon-add.component.scss']
 })
-export class AddComponent implements OnInit {
+export class DigimonAddComponent implements OnInit {
 
   formGroup;
 
