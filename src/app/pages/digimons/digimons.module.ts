@@ -8,6 +8,8 @@ import { DigimonDetailComponent } from "./pages/digimon-detail/digimon-detail.co
 import { DigimonsComponent } from "./digimons.component";
 import { DigimonAddComponent } from "./pages/digimon-add/digimon-add.component";
 import { UpperPipe } from "../../shared/pipes/upper.pipe";
+import { TableModule } from "primeng/table";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { UpperPipe } from "../../shared/pipes/upper.pipe";
   ],
   imports: [
     CommonModule,
-    DigimonsRoutingModule
+    DigimonsRoutingModule,
+    TableModule,
+    ReactiveFormsModule
   ]
 })
 export class DigimonsModule {}
