@@ -12,28 +12,36 @@ export class DigimonsComponent implements OnInit, OnDestroy {
   digimons: Array<any>;
 
   flagShowGallery = true;
+  //
+  // digimonService$Subscription;
 
-  digimonService$Subscription;
-
-  constructor(private digimonService: DigimonService, private digimonDataService: DigimonDataService) { }
+  // constructor(private digimonService: DigimonService, private digimonDataService: DigimonDataService) { }
+  constructor(private digimonService: DigimonService) { }
 
   ngOnInit(): void {
-    this.digimons = this.digimonDataService.getDigimons();
+    this.digimonService.getAll().subscribe((res: any) => {
+      console.log('##ABEL## >> DigimonsComponent >>  res', res);
+      this.digimons = res;
+    })
 
-    if (!this.digimons.length) {
-      this.digimonService$Subscription = this.digimonService.getAll().subscribe((res: any) => {
-        console.log(res);
-        this.digimons = res;
-        this.digimonDataService.setDigimons(this.digimons);
-      })
-    }
+
+    //
+    // this.digimons = this.digimonDataService.getDigimons();
+    //
+    // if (!this.digimons.length) {
+    //   this.digimonService$Subscription = this.digimonService.getAll().subscribe((res: any) => {
+    //     console.log(res);
+    //     this.digimons = res;
+    //     this.digimonDataService.setDigimons(this.digimons);
+    //   })
+    // }
 
   }
 
   ngOnDestroy() {
-    if (this.digimonService$Subscription) {
-      this.digimonService$Subscription.unsubscribe();
-    }
+    // if (this.digimonService$Subscription) {
+    //   this.digimonService$Subscription.unsubscribe();
+    // }
   }
 
 }

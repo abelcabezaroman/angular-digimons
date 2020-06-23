@@ -14,6 +14,7 @@ export class DigimonsGalleryComponent implements OnInit {
   constructor() { AOS.init()}
 
   ngOnInit(): void {
+    console.log('##ABEL## >> DigimonsGalleryComponent >>  ngOnInit', );
   }
 }
 

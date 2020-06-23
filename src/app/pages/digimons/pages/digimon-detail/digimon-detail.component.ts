@@ -9,21 +9,17 @@ import { DigimonService } from "../../../../shared/services/digimon.service";
 })
 export class DigimonDetailComponent implements OnInit {
 
-  digimonName: string;
-  digimons;
+  digimonDetail;
 
   constructor(private activatedRoute: ActivatedRoute, private digimonService: DigimonService) {
     this.activatedRoute.params.subscribe((params) => {
       if (params && params.digimonName) {
-        this.digimonName = params.digimonName;
+        this.digimonService.getDigimon(params.digimonName).subscribe(digimons => {
+          this.digimonDetail = digimons[0];
+        })
       }
     });
   }
 
-  ngOnInit(): void {
-    this.digimonService.getDigimon(this.digimonName).subscribe(digimons => {
-      this.digimons = digimons;
-    })
-  }
 
 }
