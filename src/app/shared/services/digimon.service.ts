@@ -17,3 +17,4 @@ export class DigimonService {
     return this.httpClient.get(environment.url + '/name/' + digimonName);
   }
 }
+

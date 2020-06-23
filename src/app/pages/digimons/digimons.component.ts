@@ -23,7 +23,7 @@ export class DigimonsComponent implements OnInit, OnDestroy {
     if (!this.digimons.length) {
       this.digimonService$Subscription = this.digimonService.getAll().subscribe((res: any) => {
         console.log(res);
-        this.digimons = res.splice(0, 9);
+        this.digimons = res;
         this.digimonDataService.setDigimons(this.digimons);
       })
     }
