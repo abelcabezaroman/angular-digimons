@@ -21,5 +21,5 @@ export class DigimonDetailComponent implements OnInit {
     });
   }
 
-
+  ngOnInit() {}
 }

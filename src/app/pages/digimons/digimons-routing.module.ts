@@ -4,16 +4,13 @@ import { DigimonsComponent } from "./digimons.component";
 import { DigimonAddComponent } from "./pages/digimon-add/digimon-add.component";
 import { DigimonDetailComponent } from "./pages/digimon-detail/digimon-detail.component";
 
-
 const routes: Routes = [
   {
     path: '', component: DigimonsComponent
-  }
-  ,
+  },
   {
     path: 'add', component: DigimonAddComponent
-  }
-  ,
+  },
   {
     path: ':digimonName', component: DigimonDetailComponent
   },

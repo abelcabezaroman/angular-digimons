@@ -22,9 +22,9 @@ import { ReactiveFormsModule } from "@angular/forms";
     UpperPipe
   ],
   imports: [
-    CommonModule,
     DigimonsRoutingModule,
     TableModule,
+    CommonModule,
     ReactiveFormsModule
   ]
 })
