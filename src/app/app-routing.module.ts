@@ -1,39 +1,19 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+    path: '', loadChildren: () =>
+      import('./pages/home-page/home-page.module').then(m => m.HomePageModule)
   },
   {
-    path: 'digimons', loadChildren: () => import('./pages/digimons/digimons.module').then(m => m.DigimonsModule)
-  },
-  {
-    path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
+    path: 'digimons', loadChildren: () =>
+      import('./pages/digimons-page/digimons-page.module').then(m => m.DigimonsPageModule)
   }
 ];
-
-// const routes: Routes = [
-//   {
-//     path: '', component: HomeComponent
-//   },
-//   {
-//     path: 'digimons', component: DigimonsComponent
-//   },
-//   {
-//     path: 'digimons/add', component: DigimonAddComponent
-//   },
-//   {
-//     path: 'digimons/:digimonName', component: DigimonDetailComponent
-//   },
-//   {
-//     path: 'contact', component: ContactComponent
-//   }
-// ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
