@@ -1,0 +1,12 @@
+.b-btn{
+    color: var(--color-white);
+    padding: 1.75rem;
+    background-color: var(--color-grey-3);
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    &--dark{
+        color: var(--color-black);
+    }
+}

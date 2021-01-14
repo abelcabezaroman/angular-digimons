@@ -13,8 +13,23 @@ export class DigimonsPageComponent implements OnInit {
   constructor(private digimonsService: DigimonsService) { }
 
   ngOnInit(): void {
+    this.getDigimons()
+  }
+
+  getDigimons(){
     this.digimonsService.getDigimons().subscribe(digimons => {
       this.digimons = digimons;
     })
+  }
+
+  removeDigimon(name){
+    this.digimonsService.deleteDigimon(name).subscribe(() => {
+      // this.getDigimons()
+      this.removeLocalDigimon(name);
+    });
+  }
+
+  removeLocalDigimon(name){
+    this.digimons = this.digimons.filter(digimon => digimon.name !== name);
   }
 }

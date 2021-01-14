@@ -1,0 +1,8 @@
+.c-menu{
+    &__link{
+        color: red;
+        &--active{
+            color: blue;
+        }
+    }
+}

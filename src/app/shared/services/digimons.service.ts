@@ -11,4 +11,12 @@ export class DigimonsService {
   getDigimons(){
     return this.http.get('http://localhost:3000/digimons')
   }
+
+  postDigimon(newDigimon){
+    return this.http.post('http://localhost:3000/digimons', newDigimon)
+  }
+
+  deleteDigimon(name){
+    return this.http.delete('http://localhost:3000/digimons/' + name)
+  }
 }

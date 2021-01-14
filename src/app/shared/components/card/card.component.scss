@@ -1,0 +1,31 @@
+.c-card{
+    margin: 0;
+    border-radius: 10px;
+    position: relative;
+    background-color: var(--color-white);
+    clip-path: polygon(25% 0%, 56% 10%, 100% 0, 88% 86%, 15% 100%, 0 34%);
+    &__img {
+        padding: 2rem;
+
+    }
+    &__text{
+        font-family: var(--font-family-base);
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 3rem;
+        padding: 2rem;
+        background-color: var(--color-grey-3);
+        color: var(--color-white);
+        transform: rotate(-14deg) translate(31px, -19px);
+    }
+    &__remove{
+        font-size: 2.5rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: transparent;
+        border: 0;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+}
