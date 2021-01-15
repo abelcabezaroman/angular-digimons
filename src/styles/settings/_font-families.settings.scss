@@ -11,12 +11,17 @@
 @font-face {
     font-family: Raleway;
     src: url('assets/fonts/Raleway-Black.ttf');
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 @font-face {
     font-family: Raleway;
     src: url('assets/fonts/Raleway-Light.ttf');
     font-weight: light;
+}
 
+@font-face {
+    font-family: Raleway;
+    src: url('assets/fonts/Raleway-ExtraBold.ttf');
+    font-weight: bolder;
 }

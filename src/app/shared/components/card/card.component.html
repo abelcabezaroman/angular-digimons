@@ -1,6 +1,6 @@
-<figure class="c-card">
+<figure class="c-card" >
     <div class="c-card__background" [ngStyle]="{'background-image': 'url(../../../../assets/images/' + levelEnum[data.level] + ')'}"></div>
     <img class="c-card__img" src="{{data.img}}" alt="{{data.name}}">
     <figcaption class="c-card__text">{{data.name}}</figcaption>
-    <button class="c-card__remove" (click)="clickedXEmitter.emit(data.name)">X</button>
+    <button class="c-card__remove" (click)="clickedXEmit($event, data.name)">X</button>
 </figure>

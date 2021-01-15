@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'digimons', loadChildren: () =>
       import('./pages/digimons-page/digimons-page.module').then(m => m.DigimonsPageModule)
+  },
+  {
+    path: 'characters', loadChildren: () =>
+      import('./pages/characters-page/characters-page.module').then(m => m.CharactersPageModule)
   }
 ];
 

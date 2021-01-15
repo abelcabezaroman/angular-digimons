@@ -18,6 +18,11 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickedXEmit($event, name){
+    $event.stopPropagation();
+    this.clickedXEmitter.emit(name);
+  }
+
 
 
 
